@@ -9,12 +9,13 @@ source as (
 renamed as (
 
     select
-        person_conference_id,
+        MAX(person_conference_id) as person_conference_id,
         person_id,
         conference_id
 
     from source
     where person_conference_id is not null
+    group by person_id, conference_id
 )
 
 select * from renamed

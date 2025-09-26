@@ -13,7 +13,7 @@ renamed as (
         person_full_name,
         person_photo_url,
         organization_id,
-        role_name,
+        role_name as person_job_position,
         SAFE_CAST(person_can_be_emailed as BOOL) as person_can_be_emailed,
         SAFE_CAST(person_is_hidden as BOOL) as person_is_hidden
 
