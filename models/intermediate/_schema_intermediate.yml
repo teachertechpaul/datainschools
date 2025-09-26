@@ -8,3 +8,10 @@ models:
         tests:
           - not_null
           - unique
+  - name: int_persons_aggregate_facts
+    description: This query adds calculated fields, including number of conferences.
+    columns:
+      - name: person_attribute_id
+        tests:
+          - not_null
+          - unique

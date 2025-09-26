@@ -1,1 +1,1 @@
-select * from {{ ref('int_persons_joined') }}
+select * from {{ ref('int_persons_aggregate_facts') }}
