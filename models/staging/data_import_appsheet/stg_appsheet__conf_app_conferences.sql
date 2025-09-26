@@ -17,6 +17,14 @@ renamed as (
 
     from source
     where conference_id is not null
+),
+
+add_fields as (
+    select *,
+        row_number() over (
+            order by conference_start_date asc, conference_id
+        ) as conference_number
+    from renamed
 )
 
-select * from renamed
+select * from add_fields
