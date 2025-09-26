@@ -49,6 +49,6 @@ models:
     
     mart:
       +materialized: table
-      +schema: mart
+      +schema: core
 
 
