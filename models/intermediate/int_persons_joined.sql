@@ -61,7 +61,6 @@ joined as (
         labels.*,
         person_notes.* except (person_id),
         roles.*,
-        person_conferences.*,
         conferences.*
         
     from persons
