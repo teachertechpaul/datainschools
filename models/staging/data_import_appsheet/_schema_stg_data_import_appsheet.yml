@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: stg_appsheet__conf_app_conferences
+    columns:
+      - name: conference_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_labels
+    columns:
+      - name: label_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_organization_types
+    columns:
+      - name: organization_type_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_organizations
+    columns:
+      - name: organization_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_person_conferences
+    columns:
+      - name: person_conference_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_person_emails
+    columns:
+      - name: email_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_person_labels
+    columns:
+      - name: person_label_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_person_notes
+    columns:
+      - name: person_note_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_person_roles
+    columns:
+      - name: person_role_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_persons
+    columns:
+      - name: person_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_roles
+    columns:
+      - name: role_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_sponsor_conferences
+    columns:
+      - name: sponsor_conference_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_sponsor_contacts
+    columns:
+      - name: sponsor_id
+        tests:
+          - unique
+  - name: stg_appsheet__conf_app_workshops
+    columns:
+      - name: workshop_id
+        tests:
+          - unique

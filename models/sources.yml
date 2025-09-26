@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: data_import_appsheet
+    database: dis-warehouse
+    schema: data_import_appsheet
+    tables:
+      - name: conf_app_conferences
+        description: Dimension table of conference events hosted by Data in Schools. Grain of one row per conference.
+      - name: conf_app_labels
+        description: Dimension table of labels that can be connected with conference participants. Grain of one row per label.
+      - name: conf_app_organization_types
+        description: Dimension table of types of organizations from which people may be affiliated (eg. school, edtech vendor, etc.). Grain of one row per organizational type.
+      - name: conf_app_organizations
+        description: Dimension table of all the different schools, companies, and organizations with which participants are affiliated. Grain of one row per organization.
+      - name: conf_app_person_conferences
+        description: Factless fact bridging table connecting a specific person with a specific conference. Grain of one row per conferance per participant.
+      - name: conf_app_person_emails
+        description: Dimension bridging table that associates an arbitrary number of emails with each participant. Grain of one row per email linked.
+      - name: conf_app_person_labels
+        description: Dimension bridging table linking people with particular labels. Grain of one row per participant per label.
+      - name: conf_app_person_notes
+        description: Dimension bridging table linking people with particular notes. Grain of one row per participant per note.
+      - name: conf_app_person_roles
+        description: Factless fact bridging table of the roles that a particular person played at a conference. Grain of one row per conference per participant per role.
+      - name: conf_app_persons
+        description: Dimension table of all the people that have participated in Data in Schools conferences. Grain of one row per person.
+      - name: conf_app_roles
+        description: Dimension table of all the different roles possible for conference participants. Grain of one row per role.
+      - name: conf_app_sponsor_conferences
+        description: Factless fact bridging table linking sponsors with particular conferences. Grain of one row per conference per sponsor.
+      - name: conf_app_sponsor_contacts
+        description: Dimension bridging table linking sponsor organizations with people from those organizations. Grain of one row per sponsor per person.
+      - name: conf_app_sponsors
+        description: Dimension table of conference sponsors. Grain of one row per sponsor.
+      - name: conf_app_workshop_presenters
+        description: Dimension table bridging table linking participant presenters to particular conference workshops. Grain of one row per workshop per presenter.
+      - name: conf_app_workshops
+        description: Dimension table of workshops offered at particular conferences.

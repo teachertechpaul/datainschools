@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: int_persons_joined
+    description: This query joins all person related information, including conferences, labels, notes, and emails.
+    columns:
+      - name: person_attribute_id
+        tests:
+          - not_null
+          - unique
