@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: data_import_appsheet
     database: dis-warehouse
-    schema: data_impact_appsheet
+    schema: data_import_appsheet
     tables:
       - name: conf_app_conferences
         description: Dimension table of conference events hosted by Data in Schools. Grain of one row per conference.
